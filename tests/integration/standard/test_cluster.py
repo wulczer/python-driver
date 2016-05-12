@@ -640,7 +640,7 @@ class TestAddressTranslation(unittest.TestCase):
 
         @since 3.3
         @jira_ticket PYTHON-69
-        @expected_result only one hosts' metadata will be populeated
+        @expected_result only one hosts' metadata will be populated
 
         @test_category metadata
         """
@@ -669,6 +669,7 @@ class TestAddressTranslation(unittest.TestCase):
         c.connect()
         for host in c.metadata.all_hosts():
             self.assertEqual(adder_map.get(str(host)), host.broadcast_address)
+
 
 class ContextManagementTest(unittest.TestCase):
 
